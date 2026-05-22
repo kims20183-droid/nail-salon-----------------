@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Студия маникюра и педикюра — запись онлайн, премиальные услуги, уютный салон в центре города.">
+  <title>Lumière Nails — маникюр и педикюр</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header" id="top">
+    <div class="header__inner container">
+      <a href="#top" class="logo" aria-label="На главную">
+        <span class="logo__mark">LN</span>
+        <span class="logo__text">Lumière Nails</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#about">О салоне</a>
+        <a href="#services">Услуги</a>
+        <a href="#master">Мастер</a>
+        <a href="#gallery">Работы</a>
+        <a href="#booking" class="nav__cta">Записаться</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Студия маникюра и педикюра</p>
+        <h1 id="hero-title" class="hero__title">Идеальные ногти<br><em>без спешки</em></h1>
+        <p class="hero__lead">Премиальный уход, стерильность по медицинским стандартам и дизайн любой сложности. Запишитесь онлайн за минуту.</p>
+        <div class="hero__actions">
+          <a href="#booking" class="btn btn--primary">Записаться онлайн</a>
+          <a href="#services" class="btn btn--ghost">Прайс услуг</a>
+        </div>
+        <ul class="hero__stats" aria-label="Преимущества салона">
+          <li><strong>8+</strong><span>лет опыта</span></li>
+          <li><strong>2 400+</strong><span>довольных клиентов</span></li>
+          <li><strong>4.9</strong><span>рейтинг</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__visual" aria-hidden="true">
+          <div class="about__frame">
+            <div class="about__placeholder">
+              <span>Уютная студия<br>в центре города</span>
+            </div>
+          </div>
+          <div class="about__badge">
+            <span>Стерильность</span>
+            <small>одноразовые расходники</small>
+          </div>
+        </div>
+        <div class="about__text">
+          <h2 id="about-title" class="section__title">Салон <span class="accent">Lumière Nails</span></h2>
+          <p class="section__lead">Небольшая премиальная студия, где каждая процедура — это ритуал заботы о ваших руках и ногах.</p>
+          <ul class="about__features">
+            <li>
+              <span class="about__icon" aria-hidden="true">◆</span>
+              <div>
+                <h3>Адрес</h3>
+                <p>г. Москва, ул. Тверская, 12, офис 304<br><small>5 мин от м. Пушкинская</small></p>
+              </div>
+            </li>
+            <li>
+              <span class="about__icon" aria-hidden="true">◆</span>
+              <div>
+                <h3>Часы работы</h3>
+                <p>Пн–Пт: 10:00 – 21:00<br>Сб–Вс: 11:00 – 20:00</p>
+              </div>
+            </li>
+            <li>
+              <span class="about__icon" aria-hidden="true">◆</span>
+              <div>
+                <h3>Контакты</h3>
+                <p><a href="tel:+79001234567">+7 (900) 123-45-67</a><br>
+                <a href="https://t.me/lumiere_nails" target="_blank" rel="noopener">Telegram</a> ·
+                <a href="https://wa.me/79001234567" target="_blank" rel="noopener">WhatsApp</a></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="services-title" class="section__title">Услуги и цены</h2>
+          <p class="section__lead">Маникюр, педикюр и nail-art. Точная стоимость уточняется при записи.</p>
+        </header>
+        <div class="services__tabs" role="tablist" aria-label="Категории услуг">
+          <button type="button" role="tab" aria-selected="true" aria-controls="panel-manicure" id="tab-manicure" data-tab="manicure">Маникюр</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="panel-pedicure" id="tab-pedicure" data-tab="pedicure">Педикюр</button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="panel-extra" id="tab-extra" data-tab="extra">Дополнительно</button>
+        </div>
+        <div class="services__panels">
+          <div class="services__panel" id="panel-manicure" role="tabpanel" aria-labelledby="tab-manicure" data-panel="manicure">
+            <article class="service-card">
+              <h3>Классический маникюр</h3>
+              <p>Обработка кутикулы, форма, полировка</p>
+              <span class="service-card__price">от 1 800 ₽</span>
+              <span class="service-card__time">60 мин</span>
+            </article>
+            <article class="service-card">
+              <h3>Аппаратный маникюр</h3>
+              <p>Бережная обработка фрезой, идеально для тонкой кожи</p>
+              <span class="service-card__price">от 2 200 ₽</span>
+              <span class="service-card__time">75 мин</span>
+            </article>
+            <article class="service-card service-card--featured">
+              <span class="service-card__tag">Хит</span>
+              <h3>Маникюр + гель-лак</h3>
+              <p>Стойкое покрытие, база и топ премиум-брендов</p>
+              <span class="service-card__price">от 3 200 ₽</span>
+              <span class="service-card__time">90 мин</span>
+            </article>
+            <article class="service-card">
+              <h3>Снятие + новое покрытие</h3>
+              <p>Безопасное снятие, восстановление ногтевой пластины</p>
+              <span class="service-card__price">от 3 500 ₽</span>
+              <span class="service-card__time">100 мин</span>
+            </article>
+          </div>
+          <div class="services__panel" id="panel-pedicure" role="tabpanel" aria-labelledby="tab-pedicure" data-panel="pedicure" hidden>
+            <article class="service-card">
+              <h3>Классический педикюр</h3>
+              <p>Обработка стоп, пальцев, увлажнение</p>
+              <span class="service-card__price">от 2 400 ₽</span>
+              <span class="service-card__time">75 мин</span>
+            </article>
+            <article class="service-card service-card--featured">
+              <span class="service-card__tag">Хит</span>
+              <h3>Аппаратный педикюр</h3>
+              <p>Глубокая обработка, идеален для проблемных стоп</p>
+              <span class="service-card__price">от 2 900 ₽</span>
+              <span class="service-card__time">90 мин</span>
+            </article>
+            <article class="service-card">
+              <h3>Педикюр + гель-лак</h3>
+              <p>Стойкое покрытие на ногтях стоп</p>
+              <span class="service-card__price">от 3 600 ₽</span>
+              <span class="service-card__time">100 мин</span>
+            </article>
+            <article class="service-card">
+              <h3>SPA-педикюр</h3>
+              <p>Скраб, маска, массаж, парафин</p>
+              <span class="service-card__price">от 4 200 ₽</span>
+              <span class="service-card__time">110 мин</span>
+            </article>
+          </div>
+          <div class="services__panel" id="panel-extra" role="tabpanel" aria-labelledby="tab-extra" data-panel="extra" hidden>
+            <article class="service-card">
+              <h3>Дизайн (1 ноготь)</h3>
+              <p>Френч, стразы, роспись, фольга</p>
+              <span class="service-card__price">от 150 ₽</span>
+              <span class="service-card__time">+10 мин</span>
+            </article>
+            <article class="service-card">
+              <h3>Укрепление / ремонт</h3>
+              <p>Гель, акригель, восстановление</p>
+              <span class="service-card__price">от 400 ₽</span>
+              <span class="service-card__time">+15 мин</span>
+            </article>
+            <article class="service-card">
+              <h3>Комплекс «Руки + ноги»</h3>
+              <p>Маникюр и педикюр с покрытием — скидка 10%</p>
+              <span class="service-card__price">от 5 800 ₽</span>
+              <span class="service-card__time">3 ч</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section master" id="master" aria-labelledby="master-title">
+      <div class="container master__grid">
+        <div class="master__photo" aria-hidden="true">
+          <div class="master__placeholder">Анна Волкова</div>
+        </div>
+        <div class="master__info">
+          <p class="section__eyebrow">Ваш мастер</p>
+          <h2 id="master-title" class="section__title">Анна Волкова</h2>
+          <p class="master__role">Мастер маникюра и педикюра · инструктор</p>
+          <p>Более 8 лет в индустрии nail-сервиса. Сертификаты CND, OPI, Kodi. Специализация — сложный nail-art, бережная работа с проблемной кожей и ногтевой пластиной.</p>
+          <ul class="master__certs">
+            <li>Стерилизация по СанПиН</li>
+            <li>Аппаратный маникюр и педикюр</li>
+            <li>Гель-лак и наращивание</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section__header section__header--center">
+          <h2 id="gallery-title" class="section__title">Наши работы</h2>
+          <p class="section__lead">Подборка последних дизайнов — замените на свои фотографии</p>
+        </header>
+        <div class="gallery__grid">
+          <div class="gallery__item gallery__item--wide"><span>Нюд · минимализм</span></div>
+          <div class="gallery__item"><span>Френч</span></div>
+          <div class="gallery__item"><span>Стразы</span></div>
+          <div class="gallery__item"><span>Градиент</span></div>
+          <div class="gallery__item gallery__item--tall"><span>Роспись</span></div>
+          <div class="gallery__item"><span>Педикюр</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking" id="booking" aria-labelledby="booking-title">
+      <div class="container booking__grid">
+        <div class="booking__intro">
+          <h2 id="booking-title" class="section__title">Онлайн-запись</h2>
+          <p class="section__lead">Выберите услугу, дату и удобное время. Мы перезвоним для подтверждения в течение 2 часов.</p>
+          <div class="booking__note">
+            <strong>Как это работает</strong>
+            <ol>
+              <li>Заполните форму справа</li>
+              <li>Получите SMS или сообщение в мессенджере</li>
+              <li>Приходите за 5 минут до визита</li>
+            </ol>
+          </div>
+          <div class="booking__salon-card">
+            <h3>Салон Lumière Nails</h3>
+            <address>
+              Москва, ул. Тверская, 12, офис 304<br>
+              <a href="tel:+79001234567">+7 (900) 123-45-67</a>
+            </address>
+          </div>
+        </div>
+
+        <form class="booking-form" id="booking-form" novalidate>
+          <div class="form-row">
+            <label for="name">Ваше имя <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="Как к вам обращаться">
+            <span class="form-error" id="error-name" role="alert"></span>
+          </div>
+
+          <div class="form-row form-row--half">
+            <div>
+              <label for="phone">Телефон <span aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+7 (___) ___-__-__">
+              <span class="form-error" id="error-phone" role="alert"></span>
+            </div>
+            <div>
+              <label for="contact">Мессенджер</label>
+              <select id="contact" name="contact">
+                <option value="phone">Звонок</option>
+                <option value="telegram">Telegram</option>
+                <option value="whatsapp">WhatsApp</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="service">Услуга <span aria-hidden="true">*</span></label>
+            <select id="service" name="service" required>
+              <option value="">Выберите услугу</option>
+              <optgroup label="Маникюр">
+                <option value="classic-manicure">Классический маникюр</option>
+                <option value="apparatus-manicure">Аппаратный маникюр</option>
+                <option value="gel-manicure">Маникюр + гель-лак</option>
+                <option value="removal-manicure">Снятие + новое покрытие</option>
+              </optgroup>
+              <optgroup label="Педикюр">
+                <option value="classic-pedicure">Классический педикюр</option>
+                <option value="apparatus-pedicure">Аппаратный педикюр</option>
+                <option value="gel-pedicure">Педикюр + гель-лак</option>
+                <option value="spa-pedicure">SPA-педикюр</option>
+              </optgroup>
+              <optgroup label="Другое">
+                <option value="complex">Комплекс «Руки + ноги»</option>
+                <option value="design">Только дизайн / доп. услуги</option>
+              </optgroup>
+            </select>
+            <span class="form-error" id="error-service" role="alert"></span>
+          </div>
+
+          <div class="form-row form-row--half">
+            <div>
+              <label for="date">Дата <span aria-hidden="true">*</span></label>
+              <input type="date" id="date" name="date" required>
+              <span class="form-error" id="error-date" role="alert"></span>
+            </div>
+            <div>
+              <label for="time">Время <span aria-hidden="true">*</span></label>
+              <select id="time" name="time" required disabled>
+                <option value="">Сначала выберите дату</option>
+              </select>
+              <span class="form-error" id="error-time" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="comment">Пожелания</label>
+            <textarea id="comment" name="comment" rows="3" placeholder="Дизайн, аллергии, перенос с другого мастера…"></textarea>
+          </div>
+
+          <label class="form-checkbox">
+            <input type="checkbox" id="consent" name="consent" required>
+            <span>Согласен на обработку персональных данных и получение уведомлений о записи</span>
+          </label>
+          <span class="form-error" id="error-consent" role="alert"></span>
+
+          <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+        </form>
+
+        <dialog class="modal" id="success-modal" aria-labelledby="modal-title">
+          <div class="modal__content">
+            <button type="button" class="modal__close" aria-label="Закрыть">&times;</button>
+            <div class="modal__icon" aria-hidden="true">✓</div>
+            <h3 id="modal-title">Заявка отправлена!</h3>
+            <p id="modal-text">Мы свяжемся с вами для подтверждения записи.</p>
+            <button type="button" class="btn btn--primary modal__btn">Отлично</button>
+          </div>
+        </dialog>
+      </div>
+    </section>
+
+    <section class="section map-section" id="contacts" aria-labelledby="map-title">
+      <div class="container">
+        <h2 id="map-title" class="visually-hidden">Как нас найти</h2>
+        <div class="map-section__grid">
+          <div class="map-section__info">
+            <h3 class="section__title">Как добраться</h3>
+            <p>Студия в бизнес-центре «Тверской», 3 этаж. Парковка по предварительной записи.</p>
+            <a href="https://yandex.ru/maps" class="btn btn--ghost" target="_blank" rel="noopener">Открыть в Яндекс.Картах</a>
+          </div>
+          <div class="map-section__map" aria-label="Карта расположения салона">
+            <iframe
+              title="Карта: ул. Тверская, 12, Москва"
+              src="https://yandex.ru/map-widget/v1/?ll=37.606800%2C55.760200&z=16&pt=37.606800%2C55.760200&l=map"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo__mark">LN</span>
+        <p>Lumière Nails © <span id="year"></span></p>
+      </div>
+      <nav class="footer__nav" aria-label="Подвал">
+        <a href="#about">О салоне</a>
+        <a href="#services">Услуги</a>
+        <a href="#booking">Запись</a>
+      </nav>
+      <p class="footer__legal">ИП Волкова А.С. · ОГРНИП 000000000000000</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
