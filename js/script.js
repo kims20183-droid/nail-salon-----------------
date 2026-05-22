@@ -13,6 +13,49 @@
   const yearEl = $("#year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // ——— Анимации при прокрутке ———
+  const revealTargets = [
+    { sel: ".section__header", variant: "" },
+    { sel: ".about__visual", variant: "reveal--left" },
+    { sel: ".about__text", variant: "reveal--right" },
+    { sel: ".about__features li", variant: "", stagger: 0.1 },
+    { sel: ".services__tabs", variant: "" },
+    { sel: ".master__photo", variant: "reveal--left" },
+    { sel: ".master__info", variant: "reveal--right" },
+    { sel: ".gallery__item", variant: "reveal--scale", stagger: 0.08 },
+    { sel: ".booking__intro", variant: "reveal--left" },
+    { sel: ".booking-form", variant: "reveal--right" },
+    { sel: ".map-section__info", variant: "" },
+    { sel: ".map-section__map", variant: "reveal--scale" },
+  ];
+
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!prefersReduced) {
+    revealTargets.forEach(({ sel, variant, stagger }) => {
+      $$(sel).forEach((el, i) => {
+        el.classList.add("reveal", variant);
+        if (stagger) el.style.setProperty("--reveal-delay", `${i * stagger}s`);
+      });
+    });
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    $$(".reveal").forEach((el) => revealObserver.observe(el));
+
+    $$(".services__panel:not([hidden])").forEach((p) => p.classList.add("panel--animate"));
+  }
+
   // ——— Шапка при скролле ———
   const header = $(".header");
   window.addEventListener(
@@ -42,6 +85,13 @@
   const tabs = $$(".services__tabs button");
   const panels = $$(".services__panel");
 
+  function animatePanel(panel) {
+    if (!panel || prefersReduced) return;
+    panel.classList.remove("panel--animate");
+    void panel.offsetWidth;
+    panel.classList.add("panel--animate");
+  }
+
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       const id = tab.dataset.tab;
@@ -49,6 +99,7 @@
       panels.forEach((p) => {
         const show = p.dataset.panel === id;
         p.hidden = !show;
+        if (show) animatePanel(p);
       });
     });
   });
